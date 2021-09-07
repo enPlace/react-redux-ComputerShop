@@ -76,17 +76,17 @@ const laptopSlice = createSlice({
       price: "289.99",
     },
     LenovoChromebook: {
-        id: "LenovoChromebook",
-        name: "Lenovo Chromebook Flex 5 FHD Touch Display",
-        size: "13”",
-        ram: "4GB DDR4 RAM",
-        processor: "Intel Core i3-10110U ",
-        storage: "64 GB eMMC",
-        os: "Chrome OS",
-        type: "laptop",
-        img: "",
-        price: "429.99",
-      },
+      id: "LenovoChromebook",
+      name: "Lenovo Chromebook Flex 5 FHD Touch Display",
+      size: "13”",
+      ram: "4GB DDR4 RAM",
+      processor: "Intel Core i3-10110U ",
+      storage: "64 GB eMMC",
+      os: "Chrome OS",
+      type: "laptop",
+      img: "",
+      price: "429.99",
+    },
     AcerNitro5: {
       id: "AcerNitro5",
       name: "Acer Nitro 5 AN515-55-53E5 Gaming Laptop",
@@ -99,8 +99,17 @@ const laptopSlice = createSlice({
       img: "",
       price: "818.50",
     },
-    allIds: ["ASUSZenBookProDuo", "AppleMacBookPro", "AppleMacBookAir", "LenovoChromebook", "AcerNitro5"]
+    allIds: [
+      "ASUSZenBookProDuo",
+      "AppleMacBookPro",
+      "AppleMacBookAir",
+      "LenovoIdeaPad",
+      "AcerAspire5",
+      "HPChromebook",
+      "LenovoChromebook",
+      "AcerNitro5",
+    ],
   },
 });
 
-export default laptopSlice.reducer
+export default laptopSlice.reducer;
