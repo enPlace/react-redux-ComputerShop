@@ -1,4 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "../reducers/rootReducer";
+import reducer from "../reducers/rootReducer";
 
-export default configureStore({rootReducer})
+export default configureStore({reducer})

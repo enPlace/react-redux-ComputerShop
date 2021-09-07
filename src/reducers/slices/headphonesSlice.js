@@ -48,6 +48,9 @@ const headphonesSlice = createSlice({
       "PanasonicErgo",
     ],
   },
+  reducers: {
+    test: (state) => state
+  }
 });
 
 export default headphonesSlice.reducer

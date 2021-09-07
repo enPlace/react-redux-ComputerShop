@@ -110,6 +110,9 @@ const laptopSlice = createSlice({
       "AcerNitro5",
     ],
   },
+  reducers: {
+    test: (state) => state,
+  },
 });
 
 export default laptopSlice.reducer;

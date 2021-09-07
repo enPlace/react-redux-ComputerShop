@@ -7,4 +7,8 @@ const rootReducer = combineReducers({
     inventory: inventoryReducer
 })
 
+export const selectCart = (state) =>{
+    return state.cart
+}
+
 export default rootReducer

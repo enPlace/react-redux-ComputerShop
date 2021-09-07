@@ -48,6 +48,9 @@ const tabletSlice = createSlice({
     },
     allIds: ["Fire", "iPad", "Surface", "Samsung", "Lenovo"]
   },
+  reducers: {
+    test: (state) => state
+  }
 });
 
 export default tabletSlice.reducer

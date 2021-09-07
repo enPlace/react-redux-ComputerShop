@@ -33,9 +33,17 @@ const mouseSlice = createSlice({
       price: "27.99",
       img: "",
     },
+    allIds: [
+      "seenda",
+      "RazerDeathAdder",
+      "Uiosmuph",
+      "AppleMagicMouse",
+      "Anker",
+    ],
   },
-
-  allIds: ["seenda", "RazerDeathAdder", "Uiosmuph", "AppleMagicMouse", "Anker"],
+  reducers: {
+    test: (state) => state,
+  },
 });
 
-export default mouseSlice.reducer
+export default mouseSlice.reducer;

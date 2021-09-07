@@ -4,9 +4,19 @@ import tabletSlice from "./slices/tabletSlice";
 import accessoriesReducer from "./accessories";
 
 const inventoryReducer = combineReducers({
-    laptops: laptopSlice,
-    tablets: tabletSlice,
-    accesories: accessoriesReducer
-})
+  laptops: laptopSlice,
+  tablets: tabletSlice,
+  accessories: accessoriesReducer,
+});
 
-export default inventoryReducer
+export const selectAccessories = (state) => {
+  return state.inventory.accessories;
+};
+export const selectLaptops = (state) => {
+  return state.inventory.laptops;
+};
+export const selectTablets = (state) => {
+  return state.inventory.tablets;
+};
+
+export default inventoryReducer;

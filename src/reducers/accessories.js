@@ -9,4 +9,5 @@ const accessoriesReducer = combineReducers({
     headphones: headphonesReducer
 })
 
+
 export default accessoriesReducer

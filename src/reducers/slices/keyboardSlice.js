@@ -33,15 +33,17 @@ const keyboardSlice = createSlice({
       img: "",
       price: "60.33",
     },
+    allIds: [
+      "CorsairK70",
+      "CorsairK100",
+      "AppleKeyboard",
+      "HPSlim",
+      "MicrosoftSculpt",
+    ],
   },
-
-  allIds: [
-    "CorsairK70",
-    "CorsairK100",
-    "AppleKeyboard",
-    "HPSlim",
-    "MicrosoftSculpt",
-  ],
+  reducers: {
+    test: (state) => state,
+  },
 });
 
-export default keyboardSlice.reducer
+export default keyboardSlice.reducer;
