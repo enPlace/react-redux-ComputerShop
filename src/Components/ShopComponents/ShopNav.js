@@ -8,14 +8,14 @@ const ShopNav = () => {
         flexDirection: "column",
       }}
     >
-      <ul style={{ marginTop: "100px"}}>
-        <li>All Products</li>
-        <li>Laptops</li>
-        <li>Tablets</li>
-        <li>Keyboards</li>
-        <li>Mice</li>
-        <li>Headphones</li>
-      </ul>
+      <div className = "navItems" >
+        <div>All Products</div>
+        <div>Laptops</div>
+        <div>Tablets</div>
+        <div>Keyboards</div>
+        <div>Mice</div>
+        <div>Headphones</div>
+      </div>
     </nav>
   );
 };

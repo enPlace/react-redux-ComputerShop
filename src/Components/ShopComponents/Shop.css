@@ -3,8 +3,19 @@
 }
 
 .Shop nav{
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(247, 247, 247);
+    position: fixed;
+    z-index: -1;
 }
-.Shop nav li {
-    list-style-type: none;
+
+.navItems{
+    width: 100%;
+    margin-top: 90px;
+}
+.navItems div {
+    padding: 30px;
+}
+.navItems div:hover{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
 }
