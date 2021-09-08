@@ -1,5 +1,6 @@
 .mainNav {
   background-color: black;
+  z-index: 10;
 }
 .mainNav li {
   margin-left: 200px;

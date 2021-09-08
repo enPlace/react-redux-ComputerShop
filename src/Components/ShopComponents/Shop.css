@@ -5,7 +5,7 @@
 .Shop nav {
   background-color: rgb(247, 247, 247);
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   height: 100vh;
   width: 300px;
   display: flex;

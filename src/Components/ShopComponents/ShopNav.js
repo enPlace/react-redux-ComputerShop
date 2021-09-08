@@ -1,11 +1,18 @@
 import { NavLink } from "react-router-dom";
 import { useRouteMatch } from "react-router";
+import { useDispatch } from "react-redux";
+import { displayChanged } from "../../reducers/slices/shopDisplaySlice";
 const ShopNav = () => {
   let match = useRouteMatch();
+  const dispatch = useDispatch();
   return (
     <nav>
       <div className="navItems">
-        <NavLink className="shopLink" to={`${match.url}/all`}>
+        <NavLink
+          className="shopLink"
+          to={`${match.url}/all`}
+          onclick={() => dispatch(displayChanged({ type: "all" }))}
+        >
           All Products
         </NavLink>
         <NavLink className="shopLink" to={`${match.url}/laptops`}>
