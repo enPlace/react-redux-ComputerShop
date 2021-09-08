@@ -1,21 +1,29 @@
-.Shop{
-    display:flex;
+.Shop {
+  display: flex;
 }
 
-.Shop nav{
-    background-color: rgb(247, 247, 247);
-    position: fixed;
-    z-index: -1;
+.Shop nav {
+  background-color: rgb(247, 247, 247);
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.navItems{
-    width: 100%;
-    margin-top: 90px;
+.navItems {
+  width: 100%;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
 }
-.navItems div {
-    padding: 30px;
+.navItems a {
+  padding: 30px;
+  text-decoration: none;
+  color: black;
 }
-.navItems div:hover{
-    background-color: rgb(235, 235, 235);
-    cursor: pointer;
+.shopLink:hover {
+  background-color: rgb(228, 228, 228) !important;
+  cursor: pointer !important;
 }
