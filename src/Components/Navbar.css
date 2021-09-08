@@ -1,0 +1,11 @@
+.mainNav {
+  background-color: black;
+}
+.mainNav li {
+  margin-left: 200px;
+  text-decoration: none;
+}
+.mainNav a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,10 @@
+.Shop{
+    display:flex;
+}
+
+.Shop nav{
+    background-color: rgb(214, 214, 214);
+}
+.Shop nav li {
+    list-style-type: none;
+}

@@ -12,7 +12,7 @@ const laptopSlice = createSlice({
       storage: "1TB PCIe SSD",
       os: "Windows",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/ASUSZenBookProDuo.jpg",
       price: "2,299.99",
     },
     AppleMacBookPro: {
@@ -24,7 +24,7 @@ const laptopSlice = createSlice({
       storage: "256GB SSD",
       os: "Mac",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/2020AppleMacBookPro.jpg",
       price: "1,299.99",
     },
     AppleMacBookAir: {
@@ -36,7 +36,7 @@ const laptopSlice = createSlice({
       storage: "256GB SSD",
       os: "Mac",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/MacbookAir.jpg",
       price: "949.99",
     },
     LenovoIdeaPad: {
@@ -48,7 +48,7 @@ const laptopSlice = createSlice({
       storage: "64 GB SSD Storage",
       os: "Windows",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/LenovoIdeaPad.jpg",
       price: "255.99",
     },
     AcerAspire5: {
@@ -60,7 +60,7 @@ const laptopSlice = createSlice({
       storage: "128GB SSD",
       os: "Windows",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/AcerAspire5.jpg",
       price: "439.99",
     },
     HPChromebook: {
@@ -72,7 +72,7 @@ const laptopSlice = createSlice({
       storage: "64 GB eMMC",
       os: "Chrome OS",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/HPChromebook.jpg",
       price: "289.99",
     },
     LenovoChromebook: {
@@ -84,7 +84,7 @@ const laptopSlice = createSlice({
       storage: "64 GB eMMC",
       os: "Chrome OS",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/LeonovoChromebook.jpg",
       price: "429.99",
     },
     AcerNitro5: {
@@ -96,7 +96,7 @@ const laptopSlice = createSlice({
       storage: "256GB NVMe SSD",
       os: "Windows",
       type: "laptop",
-      img: "",
+      imgsrc: "/Assets/img/laptops/AcerNitro5.jpg",
       price: "818.50",
     },
     allIds: [

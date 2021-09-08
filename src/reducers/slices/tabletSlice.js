@@ -9,7 +9,7 @@ const tabletSlice = createSlice({
       size: '8"',
       storage: "32 GB",
       price: "59.99",
-      img: "",
+      imgsrc: "/Assets/img/tablets/fire.jpg",
     },
     iPad: {
       id: "iPad",
@@ -17,11 +17,11 @@ const tabletSlice = createSlice({
       size: '12.8"',
       price: "1199.00",
       storage: "256 GB",
-      img: "",
+      imgsrc: "/Assets/img/tablets/ipad.jpg",
     },
     Surface: {
       id: "Surface",
-      img: "",
+      imgsrc: "/Assets/img/tablets/surface.jpg",
       name: "Microsoft Surface Pro 7",
       size: '12.3"',
       processor: "Intel Core i5",
@@ -31,7 +31,7 @@ const tabletSlice = createSlice({
     },
     Samsung: {
       id: "Samsung",
-      img: "",
+      imgsrc: "/Assets/img/tablets/samsung.jpg",
       name: "SAMSUNG Galaxy Tab S7",
       size: '11"',
       storage: "128GB SSD",
@@ -39,7 +39,7 @@ const tabletSlice = createSlice({
     },
     Lenovo: {
       id: "Lenovo",
-      img: "",
+      imgsrc: "/Assets/img/tablets/lenovo.jpg",
       name: "Lenovo Smart Tab M10 Plus",
       size: '10.3"',
       ram: "4GB RAM",

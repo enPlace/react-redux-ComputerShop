@@ -10,7 +10,8 @@ import {
   itemDeleted,
   itemIncremented,
   itemDecremented,
-  quantityChanged
+  quantityChanged,
+  selectQuantityById,
 } from "./reducers/slices/cartSlice";
 
 const Test = () => {
@@ -19,7 +20,7 @@ const Test = () => {
   const laptops = useSelector(selectLaptops);
   const accessories = useSelector(selectAccessories);
   const cart = useSelector(selectCart);
-
+  const quantity = useSelector(selectQuantityById("Fire"));
   console.log(tablets);
   console.log(laptops);
   console.log(accessories);
@@ -69,9 +70,17 @@ const Test = () => {
       <button onClick={() => dispatch(itemDeleted({ id: "Fire" }))}>
         delete
       </button>
-      <button onClick = {()=>{dispatch(quantityChanged({id:"Fire", quantity:4}))}} >ChangeQuantity to 4 </button>
+      <button
+        onClick={() => {
+          dispatch(quantityChanged({ id: "Fire", quantity: 4 }));
+        }}
+      >
+        ChangeQuantity to 4{" "}
+      </button>
+      <button onClick={() => console.log(quantity)}>
+        Console.log quantity
+      </button>
     </div>
-
   );
 };
 
