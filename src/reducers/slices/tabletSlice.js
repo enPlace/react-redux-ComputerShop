@@ -35,7 +35,7 @@ const tabletSlice = createSlice({
       name: "SAMSUNG Galaxy Tab S7",
       size: '11"',
       storage: "128GB SSD",
-      price: "567.99"
+      price: "567.99",
     },
     Lenovo: {
       id: "Lenovo",
@@ -44,13 +44,13 @@ const tabletSlice = createSlice({
       size: '10.3"',
       ram: "4GB RAM",
       storage: "128GB SSD",
-      price: "229.00"
+      price: "229.00",
     },
-    allIds: ["Fire", "iPad", "Surface", "Samsung", "Lenovo"]
+    allIds: ["Fire", "iPad", "Surface", "Samsung", "Lenovo"],
   },
   reducers: {
-    test: (state) => state
-  }
+    test: (state) => state,
+  },
 });
 
-export default tabletSlice.reducer
+export default tabletSlice.reducer;

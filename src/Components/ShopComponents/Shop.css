@@ -27,3 +27,13 @@
   background-color: rgb(228, 228, 228) !important;
   cursor: pointer !important;
 }
+.item{
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.123);
+}
+.item:hover{
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.336);
+}
+
+.cartManager {
+  background-color: rgba(4, 0, 128, 0.932);
+}

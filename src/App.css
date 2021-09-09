@@ -2,14 +2,13 @@
   text-align: center;
 }
 
-.Title{
-  background-color: rgba(1, 0, 37, 0.932)
+.Title {
+  background-color: rgba(1, 0, 37, 0.932);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  
 }
 
 @media (prefers-reduced-motion: no-preference) {

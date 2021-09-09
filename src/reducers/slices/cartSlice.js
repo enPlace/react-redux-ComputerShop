@@ -26,10 +26,10 @@ const cartSlice = createSlice({
   },
 });
 
-export const selectQuantityById = (id) =>(state) =>{
-    if(state.cart[id]) return state.cart[id].quantity
-    else return undefined
-}
+export const selectQuantityById = (id) => (state) => {
+  if (state.cart[id]) return state.cart[id].quantity;
+  else return undefined;
+};
 
 export const {
   itemAdded,

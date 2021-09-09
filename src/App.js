@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-       <Navbar></Navbar>
+        <Navbar></Navbar>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -19,7 +19,7 @@ function App() {
             <Shop />
           </Route>
           <Route path="/cart">
-            <Cart/>
+            <Cart />
           </Route>
           <Route path="/">
             <Home />
