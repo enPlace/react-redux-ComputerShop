@@ -1,13 +1,8 @@
 //Displays items from the inventory.json
 
-
 import { selectInventoryByType } from "../../reducers/rootReducer";
 import { useSelector } from "react-redux";
 import ItemCard from "./ItemCard";
-import "./Shop.css"
-
-
-
 
 const DisplayItems = ({ inventoryType }) => {
   const inventory = useSelector(selectInventoryByType(inventoryType));
@@ -23,11 +18,7 @@ const DisplayItems = ({ inventoryType }) => {
       }}
     >
       {inventory.allIds.map((key) => {
-
-        return (
-          <ItemCard item = {inventory[key]}></ItemCard>
-          
-        );
+        return <ItemCard item={inventory[key]}></ItemCard>;
       })}
     </div>
   );

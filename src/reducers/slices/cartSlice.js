@@ -2,32 +2,41 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: {},
+  initialState: {
+    allIds: [],
+  },
   reducers: {
     itemAdded: (state, action) => {
       if (!state.hasOwnProperty(action.payload.id)) {
-        state[action.payload.id] = action.payload;
+        let allIds = [...state.allIds];
+        let newState = {
+          ...state,
+        };
+        allIds.push(action.payload.id)
+        newState[action.payload.id] = action.payload;
+        newState.allIds = allIds
+        return newState;
       } else {
-        state[action.payload.id].quantity += action.payload.quantity;
+        state[action.payload.id].count += action.payload.count;
       }
     },
     itemDeleted: (state, action) => {
       delete state[action.payload.id];
     },
     itemIncremented: (state, action) => {
-      state[action.payload.id].quantity++;
+      state[action.payload.id].count++;
     },
     itemDecremented: (state, action) => {
-      state[action.payload.id].quantity--;
+      state[action.payload.id].count--;
     },
-    quantityChanged: (state, action) => {
-      state[action.payload.id].quantity = action.payload.quantity;
+    countChanged: (state, action) => {
+      state[action.payload.id].count = action.payload.count;
     },
   },
 });
 
-export const selectQuantityById = (id) => (state) => {
-  if (state.cart[id]) return state.cart[id].quantity;
+export const selectcountById = (id) => (state) => {
+  if (state.cart[id]) return state.cart[id].count;
   else return undefined;
 };
 
@@ -36,7 +45,7 @@ export const {
   itemDeleted,
   itemIncremented,
   itemDecremented,
-  quantityChanged,
+  countChanged,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
