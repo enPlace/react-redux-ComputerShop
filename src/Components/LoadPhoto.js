@@ -1,8 +1,8 @@
-const LoadPhoto = ({ source }) => {
+const LoadPhoto = ({ source, width }) => {
   return (
     <img
       style={{
-        width: "150px",
+        width: width,
       }}
       src={source}
       alt="not working"

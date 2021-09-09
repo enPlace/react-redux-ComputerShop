@@ -23,6 +23,7 @@ const CartSummary = ({ cart }) => {
         marginTop: " 150px",
         right: "50px",
         borderRadius: "10px",
+        
       }}
     >
       <div className="cartSummaryItems" style = {{overflowY:"scroll"}}  >
@@ -44,7 +45,7 @@ const CartSummary = ({ cart }) => {
         }}
       >
         <div className="summaryTotalTitle">Total Price: </div>
-        <div className="summaryTotalPrice">{totalPrice}</div>
+        <div className="summaryTotalPrice">${totalPrice}</div>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const ItemCard = ({ item }) => {
       }}
     >
       <Suspense fallback={loader()}>
-        <LoadPhoto source={item.imgsrc} />
+        <LoadPhoto source={item.imgsrc} width = "150px" />
       </Suspense>
       <div
         className="itemInfo"
