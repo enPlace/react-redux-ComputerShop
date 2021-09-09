@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 import icon from "../Assets/newegg.png";
 import "./Navbar.css";
 import cartIcon from "../Assets/shopping-cart.svg";
+import { useSelector } from "react-redux";
+import { selectTotalCount } from "../reducers/slices/cartSlice";
 const Navbar = () => {
+  const count = useSelector(selectTotalCount)
   return (
     <nav class = "mainNav"
       style={{
@@ -41,15 +44,16 @@ const Navbar = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/shop/laptops">Shop</NavLink>
         </li>
         <li style={{ marginRight: "20px" }}>
-          <NavLink to="/cart">
+          <NavLink to="/cart" style = {{color:"orange"}}>
             <img
               src={cartIcon}
               alt="..."
               style={{ width: "30px", height: "30px" }}
             />{" "}
+            {count}
           </NavLink>
         </li>
       </ul>

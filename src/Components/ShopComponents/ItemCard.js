@@ -26,6 +26,7 @@ const ItemCard = ({ item }) => {
         margin: "10px",
         padding: "20px",
         paddingBottom: "0",
+
       }}
     >
       <Suspense fallback={loader()}>
@@ -59,6 +60,7 @@ const ItemCard = ({ item }) => {
           marginTop: "20px",
           paddingTop: "10px",
           paddingBottom: "10px",
+          borderRadius: "0 0 10px 10px"
         }}
       >
         <form

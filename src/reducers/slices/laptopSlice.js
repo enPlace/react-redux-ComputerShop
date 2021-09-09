@@ -13,7 +13,7 @@ const laptopSlice = createSlice({
       os: "Windows",
       type: "laptop",
       imgsrc: "/Assets/img/laptops/ASUSZenBookProDuo.jpg",
-      price: "2,299.99",
+      price: "2299.99",
     },
     AppleMacBookPro: {
       id: "AppleMacBookPro",
@@ -25,7 +25,7 @@ const laptopSlice = createSlice({
       os: "Mac",
       type: "laptop",
       imgsrc: "/Assets/img/laptops/2020AppleMacBookPro.jpg",
-      price: "1,299.99",
+      price: "1299.99",
     },
     AppleMacBookAir: {
       id: "AppleMacBookAir",
