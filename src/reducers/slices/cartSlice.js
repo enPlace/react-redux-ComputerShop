@@ -31,7 +31,7 @@ const cartSlice = createSlice({
       state[action.payload.id].count++;
     },
     itemDecremented: (state, action) => {
-      state[action.payload.id].count--;
+      if(state[action.payload.id].count>0)state[action.payload.id].count--;
     },
     countChanged: (state, action) => {
       state[action.payload.id].count = action.payload.count;
@@ -46,8 +46,8 @@ export const selectAllCartIds = (state) => {
   return state.cart.allIds;
 };
 export const selectcountById = (id) => (state) => {
-  if (state.cart[id]) return state.cart[id].count;
-  else return undefined;
+  return state.cart[id].count;
+
 };
 
 export const selectItemById = (id) => (state) => {
@@ -69,6 +69,9 @@ export const selectTotalPrice = (state) => {
   });
   return Math.round(price*100)/100
 };
+export const selectItemPriceById =(id)=>(state) =>{
+  return Math.round(state.cart[id].count * (parseFloat(state.cart[id].price) * 100)) / 100
+}
 
 
 

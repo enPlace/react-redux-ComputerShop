@@ -1,20 +1,29 @@
 import { lazy, Suspense } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { CircularProgress } from "@material-ui/core";
-import { selectItemById, itemDeleted } from "../../reducers/slices/cartSlice";
+import trashIcon from "../../Assets/trash.svg"
+import {
+  selectItemById,
+  selectItemPriceById,
+  itemIncremented,
+  itemDecremented,
+  itemDeleted,
+} from "../../reducers/slices/cartSlice";
 
 const LoadPhoto = lazy(() => import("../LoadPhoto"));
 const loader = () => <CircularProgress></CircularProgress>;
 
 const CartDetailItem = ({ id }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const item = useSelector(selectItemById(id));
+  const itemPrice = useSelector(selectItemPriceById(id))
+
   return (
     <div
       className="cartDetailItem"
       style={{
         boxSizing: "border-box",
-        
+
         width: "100%",
         display: "flex",
       }}
@@ -26,8 +35,20 @@ const CartDetailItem = ({ id }) => {
       </div>
       <div className="col2" style={{ margin: "10px", padding: "10px" }}>
         <div style={{ fontWeight: "bold", fontSize: "20px" }}>{item.name}</div>
-        <div style={{ display: "flex", alignItems: "center", margin: "10px 0 10px 0" }}>
-          Quantity: <button style={{ margin: "0px 10px 0 10px" }}>-</button>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            margin: "10px 0 10px 0",
+          }}
+        >
+          Quantity:{" "}
+          <button
+            onClick={() => dispatch(itemDecremented({ id }))}
+            style={{ margin: "0px 10px 0 10px" }}
+          >
+            -
+          </button>
           <div
             style={{
               border: "1px solid black",
@@ -36,7 +57,12 @@ const CartDetailItem = ({ id }) => {
           >
             {item.count}
           </div>
-          <button style={{ margin: "0px 10px 0 10px" }}>+</button>{" "}
+          <button
+            onClick={() => dispatch(itemIncremented({ id }))}
+            style={{ margin: "0px 10px 0 10px" }}
+          >
+            +
+          </button>{" "}
         </div>
         <div>Price x 1 ={item.price}</div>
       </div>
@@ -45,16 +71,21 @@ const CartDetailItem = ({ id }) => {
         style={{
           marginLeft: "auto",
           justifyContent: "space-around",
+          
           padding: "20px",
           display: "flex",
           flexDirection: "column",
         }}
       >
         <div style={{ marginLeft: "auto" }}>
-          {" "}
-          ${(item.count * (parseFloat(item.price) * 100)) / 100}{" "}
+          ${itemPrice}
         </div>
-        <button onClick = {()=>dispatch(itemDeleted({id:id}))}  style={{ marginTop: "auto" }}>Remove from cart</button>
+        <button
+          onClick={() => dispatch(itemDeleted({ id: id }))}
+          style={{ marginTop: "auto", marginLeft:"auto", width: "60px" }}
+        >
+          <img src={trashIcon} style = {{width:"30px"}} alt="" />
+        </button>
       </div>
     </div>
   );
