@@ -19,7 +19,13 @@ const cartSlice = createSlice({
       }
     },
     itemDeleted: (state, action) => {
-      delete state[action.payload.id];
+      const newIds = state.allIds.filter(id => id !== action.payload.id)
+      const newState = {...state}
+      delete newState[action.payload.id]; 
+      newState.allIds = newIds
+      return newState
+
+      
     },
     itemIncremented: (state, action) => {
       state[action.payload.id].count++;

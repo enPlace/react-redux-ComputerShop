@@ -1,11 +1,13 @@
 import { lazy, Suspense } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { CircularProgress } from "@material-ui/core";
-import { selectItemById } from "../../reducers/slices/cartSlice";
+import { selectItemById, itemDeleted } from "../../reducers/slices/cartSlice";
+
 const LoadPhoto = lazy(() => import("../LoadPhoto"));
 const loader = () => <CircularProgress></CircularProgress>;
 
 const CartDetailItem = ({ id }) => {
+  const dispatch = useDispatch()
   const item = useSelector(selectItemById(id));
   return (
     <div
@@ -52,7 +54,7 @@ const CartDetailItem = ({ id }) => {
           {" "}
           ${(item.count * (parseFloat(item.price) * 100)) / 100}{" "}
         </div>
-        <button style={{ marginTop: "auto" }}>Remove from cart</button>
+        <button onClick = {()=>dispatch(itemDeleted({id:id}))}  style={{ marginTop: "auto" }}>Remove from cart</button>
       </div>
     </div>
   );
