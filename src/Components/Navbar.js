@@ -15,7 +15,7 @@ const Navbar = () => {
         alignItems: "center",
       }}
     >
-      <NavLink to="/" style ={{display:"flex", alignItems:"center"}}>
+      <NavLink to="/" style ={{display:"flex", alignItems:"center", marginLeft: "20px"}}>
         <img
           src={icon}
           alt=""
