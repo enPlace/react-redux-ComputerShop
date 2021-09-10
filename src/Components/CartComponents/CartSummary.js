@@ -18,22 +18,29 @@ const CartSummary = ({ cart }) => {
         flexDirection: "column",
         width: "300px",
         height: "500px",
-        border: "1px solid black",
+        boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.615)",
         position: " fixed",
-        marginTop: " 150px",
+        marginTop: " 100px",
         right: "50px",
         borderRadius: "10px",
-        
+        paddingTop: "4px"
       }}
     >
-      <div className="cartSummaryItems" style = {{overflowY:"scroll"}}  >
-        {!cartIds[0] ? <div>Your cart is empty</div> : cartIds.map((id) => <CartSummaryItem id = {id} />)}
+      <div className="cartSummaryItems" style={{ overflowY: "auto" }}>
+        {!cartIds[0] ? (
+          <h3 style={{  padding: "10px" }}>
+            Your cart is empty
+          </h3>
+        ) : (
+          cartIds.map((id) => <CartSummaryItem id={id} />)
+        )}
       </div>
-      
+
       <div
         className="summaryTotal"
         style={{
           boxSizing: "border-box",
+          boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.615)",
           width: "100%",
           padding: "20px",
           marginTop: "auto",

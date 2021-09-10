@@ -1,5 +1,7 @@
 .mainNav {
-  background-color: black;
+  /* background-color: black; */
+  background-color:   rgb(1, 0, 37);
+ /* background-color: rgb(8, 10, 92); */
   z-index: 10;
 }
 .mainNav li {

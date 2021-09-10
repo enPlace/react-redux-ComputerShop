@@ -9,7 +9,7 @@ const ShopNav = () => {
       <div className="navItems">
         <h3 style={{ marginLeft: "30px" }}>Categories</h3>
 
-        <NavLink className="shopLink" to={`${match.url}/laptops`}>
+        <NavLink className="shopLink"  to={`${match.url}/laptops`}>
           Laptops
         </NavLink>
         <NavLink className="shopLink" to={`${match.url}/tablets`}>

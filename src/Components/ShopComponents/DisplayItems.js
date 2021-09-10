@@ -12,14 +12,25 @@ const DisplayItems = ({ inventoryType }) => {
       className="DisplayItems"
       style={{
         marginLeft: "300px",
-        display: "flex",
-        flexWrap: "wrap",
-        marginTop: "200px",
+        marginBottom:"80px"
       }}
     >
-      {inventory.allIds.map((key) => {
-        return <ItemCard item={inventory[key]}></ItemCard>;
-      })}
+{/*       <div
+        className="categoryTitle"
+        
+      >
+        <h2 style = {{margin: "0", marginTop: "auto", width: "250px", borderBottom: "6px solid rgba(3, 0, 90, 0.932)"}}>
+          {inventoryType.charAt(0).toUpperCase() + inventoryType.slice(1)}
+        </h2>
+      </div> */}
+      <div
+        className="displayInventory"
+        style={{ display: "flex", flexWrap: "wrap", marginTop: "100px"}}
+      >
+        {inventory.allIds.map((key) => {
+          return <ItemCard item={inventory[key]}></ItemCard>;
+        })}
+      </div>
     </div>
   );
 };

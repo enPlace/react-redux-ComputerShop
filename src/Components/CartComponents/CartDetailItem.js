@@ -23,9 +23,10 @@ const CartDetailItem = ({ id }) => {
       className="cartDetailItem"
       style={{
         boxSizing: "border-box",
-
+        boxShadow: "1px 3px 5px rgba(0, 0, 0, 0.315)",
         width: "100%",
         display: "flex",
+        marginBottom:"30px"
       }}
     >
       <div className="col1" style={{ margin: "10px" }}>
@@ -51,7 +52,7 @@ const CartDetailItem = ({ id }) => {
           </button>
           <div
             style={{
-              border: "1px solid black",
+              border: "1px solid gray",
               padding: "0px 10px 0 10px",
             }}
           >

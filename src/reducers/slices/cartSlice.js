@@ -49,7 +49,6 @@ export const selectcountById = (id) => (state) => {
   return state.cart[id].count;
 
 };
-
 export const selectItemById = (id) => (state) => {
   return state.cart[id];
 };
