@@ -16,22 +16,14 @@ const ItemCard = ({ item }) => {
     <div
       className="item"
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        width: "200px",
-        minHeight: "300px",
-        textAlign: "center",
-        margin: "10px",
-        padding: "20px",
-        paddingBottom: "0",
+
 
       }}
     >
       <Suspense fallback={loader()}>
         <LoadPhoto source={item.imgsrc} width = "150px" />
       </Suspense>
+      <h4 className = "itemName">{item.name}</h4>
       <div
         className="itemInfo"
         style={{
@@ -39,9 +31,10 @@ const ItemCard = ({ item }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          fontSize: "13px"
         }}
       >
-        <h4>{item.name}</h4>
+        
         <div>{item.size}</div>
         <div>{item.ram}</div>
         <div>{item.processor}</div>
@@ -115,7 +108,7 @@ const ItemCard = ({ item }) => {
               backgroundColor: "white",
             }}
           >
-            <img src={shoppingCartIcon} alt="" style={{ width: "20px" }} /> Add
+            <img src={shoppingCartIcon} id = "itemIcon" alt="" style={{ width: "20px" }} /> Add
             to cart{" "}
           </button>
         </form>

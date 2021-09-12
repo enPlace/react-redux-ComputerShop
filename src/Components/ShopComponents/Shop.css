@@ -1,19 +1,6 @@
 .Shop {
   display: flex;
 }
-
-/* .categoryTitle{
-  background-color: rgb(247, 247, 247);
-  font-style: italic;
-  border-bottom: 1px solid rgba(3, 0, 90, 0.932);
-  height: 75px;
-  padding-top: 75px;
-  margin-bottom: 50px;
-  font-size: 25px;
-  display: flex;
-  color: rgba(3, 0, 90, 0.932);
-
-} */
 .Shop nav {
   background-color: rgb(247, 247, 247);
   position: fixed;
@@ -23,7 +10,22 @@
   display: flex;
   flex-direction: column;
 }
-
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 200px;
+  min-height: 300px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.itemName {
+  margin: 0px;
+  margin-top: 10px;
+}
 .navItems {
   width: 100%;
   margin-top: 90px;
@@ -39,21 +41,163 @@
   background-color: rgb(228, 228, 228) !important;
   cursor: pointer !important;
 }
-.item{
+.item {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.315);
   border-radius: 10px;
 }
-.item:hover{
+.item:hover {
   box-shadow: 1px 3px 5px rgba(5, 5, 5, 0.562);
 }
 
 .cartManager {
-  background-color:   rgb(7, 3, 121);
+  background-color: rgb(7, 3, 121);
 }
-.shopLink.active{
+.shopLink.active {
   font-weight: bolder;
   font-style: italic;
   color: rgb(255, 72, 0);
+}
 
- 
+@media only screen and (max-width: 1090px) {
+  .Shop nav {
+    width: 200px;
+  }
+  .DisplayItems {
+    margin-left: 200px !important;
+  }
+  .item {
+    font-size: 12px;
+    padding-top: 0px;
+    width: 150px;
+  }
+
+  #itemIcon {
+    width: 20px !important;
+  }
+  .cartManager {
+    width: 190px !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .Shop nav {
+    width: 100vw;
+    height: 60px;
+    top: 55px;
+    flex-direction: row;
+  }
+  .navItems {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .navItems h3 {
+    display: none;
+  }
+  .shopLink {
+    padding: 0px !important;
+    padding-right: 20px !important;
+  }
+  .shopLink:hover {
+    background-color: transparent !important;
+    text-decoration: underline;
+  }
+  .DisplayItems {
+    margin-left: 20px !important;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .item {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0px;
+    max-height: 185px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    border-radius: 0;
+  }
+  .DisplayItems{
+    margin-left: 0px !important;
+  }
+  
+  .item img {
+    max-width: 65px;
+    max-height: 80px !important;
+    grid-row: 7/9;
+    grid-column: 3/6;
+  }
+  .itemName {
+    grid-row: 2/4;
+    grid-column: 1/7;
+    margin: 0px;
+  }
+  .itemInfo {
+    grid-column: 7/9;
+    grid-row: 2/12;
+    justify-content: space-between;
+  }
+  .cartManager {
+    grid-row: 1/13;
+    grid-column: 10/14;
+    height: 80% !important;
+    width: 70px !important;
+    margin: 0 !important;
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .cartManager form {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .cartManager form button {
+    font-size: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray !important;
+
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .Shop nav {
+    width: 100vw;
+    height: 60px;
+    top: 55px;
+    flex-direction: row;
+  }
+  .navItems {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .navItems h3 {
+    display: none;
+  }
+  .shopLink {
+    padding: 0px !important;
+    padding-right: 20px !important;
+  }
+  .shopLink:hover {
+    background-color: transparent !important;
+    text-decoration: underline;
+  }
+  .DisplayItems {
+    margin-left: 20px !important;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .Shop nav {
+    top: 70px
+
+  }  
 }

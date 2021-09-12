@@ -18,7 +18,7 @@ const CartSummary = ({ cart }) => {
         height: "500px",
         boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.615)",
         position: " fixed",
-        marginTop: " 100px",
+        top: " 120px",
         right: "50px",
         borderRadius: "10px",
         paddingTop: "4px"
