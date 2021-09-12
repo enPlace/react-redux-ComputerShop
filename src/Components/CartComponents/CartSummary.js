@@ -8,8 +8,6 @@ import CartSummaryItem from "./CartSummaryItem";
 const CartSummary = ({ cart }) => {
   const totalPrice = useSelector(selectTotalPrice);
   const cartIds = useSelector(selectAllCartIds);
-  console.log(cartIds[0]);
-  console.log(totalPrice);
   return (
     <div
       className="cartSummary"

@@ -25,6 +25,8 @@ const CartDetailItem = ({ id }) => {
         boxSizing: "border-box",
         boxShadow: "1px 3px 5px rgba(0, 0, 0, 0.315)",
         width: "100%",
+        /* minWidth: "430px", */
+        
         display: "flex",
         marginBottom:"30px"
       }}

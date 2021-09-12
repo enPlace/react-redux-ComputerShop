@@ -13,3 +13,20 @@
   text-decoration: none;
   color: white;
 }
+@media only screen and (max-width: 550px) {
+.mainNav li{
+  margin-right: 20px;
+}
+.navIcon{
+  margin-right: 5px !important; 
+}
+}
+@media only screen and (max-width: 550px) {
+    .mainNav{
+      font-size: 12px;
+    }
+    .mainNav img{
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }

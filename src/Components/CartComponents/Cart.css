@@ -1,5 +1,51 @@
-.summaryItem li{
+.summaryItem li {
+  list-style-type: none;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 920px) {
+  .cartSummary {
+    display: none !important;
+  }
+  .cartDetail {
+    margin-top: 100px !important;
+    width: 100% !important;
+    margin-left: 0px !important;
+    padding: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .Cart {
+    width: 100vw !important;
+  }
+  .cartSummary {
+    display: none !important;
+  }
+  .cartDetail {
+    padding: 10px !important;
+  }
+  .cartDetailItem {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     
-    list-style-type: none;
-    font-size: 12px;
+  }
+  
+  .col2{
+    grid-row: 2/3;
+    grid-column: 1/4;
+    width: 90% !important;
+
+    padding: 0 !important;
+  }
+  .col2 div {
+    font-size: 16px !important;
+  }
+  .col3{
+    grid-row: 1/2;
+    grid-column: 3/3;
+    height: 75px;
+    
+  }
 }

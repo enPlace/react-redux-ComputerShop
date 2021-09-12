@@ -46,7 +46,7 @@ const Navbar = () => {
         <li>
           <NavLink to="/shop/laptops">Shop</NavLink>
         </li>
-        <li style={{ marginRight: "20px" }}>
+        <li class = "navIcon" style={{ marginRight: "20px" }}>
           <NavLink to="/cart" style = {{color:"orange"}}>
             <img
               src={cartIcon}
@@ -56,7 +56,7 @@ const Navbar = () => {
             {count}
           </NavLink>
         </li>
-      </ul>
+      </ul> 
     </nav>
   );
 };

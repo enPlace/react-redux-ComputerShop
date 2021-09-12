@@ -1,4 +1,5 @@
 import video from "../homevid(online-video-cutter.com).mp4";
+import { Link } from "react-router-dom";
 import speaker from "../Assets/pexels-steve-johnson-1044989.jpg";
 import icon from "../Assets/newegg.png";
 
@@ -13,7 +14,7 @@ const Home = () => {
           width: "100vw",
           height: "100vh",
           zIndex: "-10",
-          backgroundColor:"black"
+          backgroundColor: "black",
         }}
       />
       {/*       <video
@@ -34,12 +35,26 @@ const Home = () => {
       >
         <source src={video} type="video/mp4"></source>
       </video> */}
-      <button>Test</button>
+      <Link to="/shop/laptops" style={{ position: "fixed", bottom: "270px" }}>
+        <button
+          style={{
+            width: "300px",
+            height: "50px",
+            border: "none",
+            backgroundColor: "rgba(255, 166, 0, 0.94)",
+            fontSize: "25px",
+            color: "white",
+            fontWeight: "bolder",
+          }}
+        >
+          Start shopping
+        </button>
+      </Link>
       <div
         className="Title"
         style={{
           width: "100vw",
-          height: "250px",
+          height: "220px",
           color: "white",
           position: "fixed",
           bottom: "20px",
@@ -59,6 +74,7 @@ const Home = () => {
             height: "150px",
             marginRight: "20px",
             marginTop: "10px",
+            marginLeft: "-40px",
           }}
         />
         <h1
