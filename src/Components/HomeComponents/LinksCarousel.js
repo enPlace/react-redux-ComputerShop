@@ -2,13 +2,13 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React, { lazy, Suspense } from "react";
 import { CircularProgress } from "@material-ui/core";
-import laptop from "../Assets/laptop.jpeg"
-import tablet from "../Assets/tablet.jpeg"
-import keyboard from "../Assets/keyboard.jpeg"
-import mouse from "../Assets/mouse.jpeg"
-import headset from "../Assets/headphonesman.jpeg"
+import laptop from "../../Assets/laptop.jpeg"
+import tablet from "../../Assets/tablet.jpeg"
+import keyboard from "../../Assets/keyboard.jpeg"
+import mouse from "../../Assets/mouse.jpeg"
+import headset from "../../Assets/headphonesman.jpeg"
 
-const LoadPhoto = lazy(() => import("./LoadPhoto"));
+const LoadPhoto = lazy(() => import("../LoadPhoto"));
 const loader = () => <CircularProgress></CircularProgress>;
 
 export default function LinksCarousel() {
@@ -35,7 +35,7 @@ export default function LinksCarousel() {
           <Suspense fallback={loader()}>
             <LoadPhoto source={laptop} width="300px" />
           </Suspense>
-          <h1 style = {{marginBottom: "50px", backgroundColor: "rgba(255, 166, 0, 0.94)", borderRadius: "30px", padding: "10px",}}>Laptops</h1>
+          <h1 style = {{marginBottom: "50px", backgroundColor: "black", borderRadius: "30px", padding: "10px",}}>Laptops</h1>
         </div>
 
         <div style={{ color: "white", display:"flex", flexDirection:"column", alignItems: "center", justifyContent:"center"}}>

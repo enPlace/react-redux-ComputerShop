@@ -1,7 +1,5 @@
-import video from "../homevid(online-video-cutter.com).mp4";
-import { Link } from "react-router-dom";
-import speaker from "../Assets/pexels-steve-johnson-1044989.jpg";
-import icon from "../Assets/newegg.png";
+import speaker from "../../Assets/pexels-steve-johnson-1044989.jpg";
+import icon from "../../Assets/newegg.png";
 import LinksCarousel from "./LinksCarousel";
 const Home = () => {
   return (
@@ -52,11 +50,11 @@ const Home = () => {
           Start shopping
         </button>
       </Link> */}
-      {/* <div
+       <div
         className="Title"
         style={{
           width: "100vw",
-          height: "220px",
+          height: "170px",
           color: "white",
           position: "fixed",
           bottom: "20px",
@@ -65,6 +63,8 @@ const Home = () => {
           alignItems: "center",
           fontSize: "50px",
           fontStyle: "italic",
+          zIndex:"-10"
+
        
         }}
       >
@@ -81,7 +81,7 @@ const Home = () => {
           }}
         />
         <h1>nuevohuevo!</h1>
-      </div> */}
+      </div> 
     </div>
   );
 };
