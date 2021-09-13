@@ -1,10 +1,9 @@
 .App {
   text-align: center;
+  width: 100vw;
 }
 
-.Title {
-  background-color: rgba(4, 1, 78, 0.479);
-}
+
  .Home button {
   background-color:rgba(255, 166, 0, 0.74),
  }

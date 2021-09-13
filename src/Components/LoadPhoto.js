@@ -1,5 +1,7 @@
 const LoadPhoto = ({ source, width }) => {
-  return (
+  console.log(width)
+  return width !==undefined ? (
+  
     <img
       style={{
         width: width,
@@ -7,6 +9,8 @@ const LoadPhoto = ({ source, width }) => {
       src={source}
       alt="not working"
     />
+  ) : (
+    <img src={source} alt="not working" />
   );
 };
 

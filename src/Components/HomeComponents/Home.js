@@ -1,22 +1,44 @@
 import speaker from "../../Assets/pexels-steve-johnson-1044989.jpg";
 import icon from "../../Assets/newegg.png";
 import LinksCarousel from "./LinksCarousel";
+import "./Home.css";
 const Home = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      className = "Home"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100vw",
+        height: "100vh",
+        overflowx: "none",
+        
+      }}
+    >
       <img
         src={speaker}
         alt=""
         style={{
           position: "fixed",
-          width: "100vw",
-          height: "100vh",
+          width: "150vw",
+          height: "150vh",
           zIndex: "-10",
           backgroundColor: "black",
         }}
       />
-
+      <div  style ={{
+        marginTop: "65px",
+        backgroundColor: "rgba(0, 0, 0, 0.481) ",
+        width: "100vw",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center"
+        
+      }}>
       <LinksCarousel></LinksCarousel>
+      </div>
       {/*       <video
         style={{
           objectFit: "cover",
@@ -50,38 +72,10 @@ const Home = () => {
           Start shopping
         </button>
       </Link> */}
-       <div
-        className="Title"
-        style={{
-          width: "100vw",
-          height: "170px",
-          color: "white",
-          position: "fixed",
-          bottom: "20px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "50px",
-          fontStyle: "italic",
-          zIndex:"-10"
-
-       
-        }}
-      >
-        <img
-          src={icon}
-          alt=""
-          style={{
-            borderRadius: "50%",
-            width: "150px",
-            height: "150px",
-            marginRight: "20px",
-            marginTop: "10px",
-            marginLeft: "-40px",
-          }}
-        />
+      <div className="Title">
+        <img src={icon} alt="" style={{}} />
         <h1>nuevohuevo!</h1>
-      </div> 
+      </div>
     </div>
   );
 };
