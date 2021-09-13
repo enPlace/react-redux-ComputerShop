@@ -110,6 +110,9 @@
   }
 }
 @media only screen and (max-width: 440px) {
+  .Shop nav {
+    font-size: 11px;
+  }
   .item {
     box-sizing: border-box;
     width: 100%;
@@ -140,6 +143,9 @@
     grid-column: 7/9;
     grid-row: 2/12;
     justify-content: space-between;
+  }
+  .itemInfo div {
+    width: 80px;
   }
   .cartManager {
     grid-row: 1/13;

@@ -2,7 +2,7 @@ import video from "../homevid(online-video-cutter.com).mp4";
 import { Link } from "react-router-dom";
 import speaker from "../Assets/pexels-steve-johnson-1044989.jpg";
 import icon from "../Assets/newegg.png";
-
+import LinksCarousel from "./LinksCarousel";
 const Home = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -17,6 +17,8 @@ const Home = () => {
           backgroundColor: "black",
         }}
       />
+
+      <LinksCarousel></LinksCarousel>
       {/*       <video
         style={{
           objectFit: "cover",
@@ -35,7 +37,7 @@ const Home = () => {
       >
         <source src={video} type="video/mp4"></source>
       </video> */}
-      <Link to="/shop/laptops" style={{ position: "fixed", bottom: "270px" }}>
+      {/* <Link to="/shop/laptops" style={{ position: "fixed", bottom: "270px" }}>
         <button
           style={{
             width: "300px",
@@ -49,8 +51,8 @@ const Home = () => {
         >
           Start shopping
         </button>
-      </Link>
-      <div
+      </Link> */}
+      {/* <div
         className="Title"
         style={{
           width: "100vw",
@@ -63,6 +65,7 @@ const Home = () => {
           alignItems: "center",
           fontSize: "50px",
           fontStyle: "italic",
+       
         }}
       >
         <img
@@ -77,17 +80,8 @@ const Home = () => {
             marginLeft: "-40px",
           }}
         />
-        <h1
-          style={
-            {
-              /* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,900&display=swap');
-            font-family: 'Work Sans', sans-serif; */
-            }
-          }
-        >
-          nuevohuevo!
-        </h1>
-      </div>
+        <h1>nuevohuevo!</h1>
+      </div> */}
     </div>
   );
 };

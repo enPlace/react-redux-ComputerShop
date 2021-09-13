@@ -1,7 +1,7 @@
 .mainNav {
   /* background-color: black; */
-  background-color:   rgb(1, 0, 37);
- /* background-color: rgb(8, 10, 92); */
+  background-color: rgb(1, 0, 37);
+  /* background-color: rgb(8, 10, 92); */
   z-index: 10;
 }
 .mainNav li {
@@ -14,19 +14,19 @@
   color: white;
 }
 @media only screen and (max-width: 550px) {
-.mainNav li{
-  margin-right: 20px;
-}
-.navIcon{
-  margin-right: 5px !important; 
-}
+  .mainNav li {
+    margin-right: 20px;
+  }
+  .navIcon {
+    margin-right: 5px !important;
+  }
 }
 @media only screen and (max-width: 550px) {
-    .mainNav{
-      font-size: 12px;
-    }
-    .mainNav img{
-      width: 30px !important;
-      height: 30px !important;
-    }
+  .mainNav {
+    font-size: 12px;
   }
+  .mainNav img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
