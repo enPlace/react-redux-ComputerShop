@@ -3,20 +3,18 @@ import { useState } from "react";
 import shoppingCartIcon from "../../Assets/shopping-cart.svg";
 import { CircularProgress } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  selectCategoryBool,
-  setNewCategorySelected,
-} from "../../reducers/slices/newCategorySelectedSlice";
+import { selectCategoryBool, setNewCategorySelected } from "../../reducers/slices/newCategorySelectedSlice";
 import { itemAdded } from "../../reducers/slices/cartSlice";
+
 
 const LoadPhoto = lazy(() => import("../LoadPhoto"));
 const loader = () => <CircularProgress></CircularProgress>;
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
-  const categoryBool = useSelector(selectCategoryBool);
+  const categoryBool = useSelector(selectCategoryBool)
   const [count, setCount] = useState(0);
-  if (categoryBool && count !== 0) {
+  if (categoryBool && count!==0 ){
     setCount(0);
   }
   return (
@@ -67,15 +65,13 @@ const ItemCard = ({ item }) => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
-            if (count < 0) {
-              dispatch(
-                itemAdded({
-                  ...item,
-                  count,
-                })
-              );
-              setCount(0);
-            }
+          if(count>0) { dispatch(
+              itemAdded({
+                ...item,
+                count,
+              })
+            );
+            setCount(0);}
           }}
         >
           {" "}
@@ -97,13 +93,10 @@ const ItemCard = ({ item }) => {
                 setCount(e.target.value);
               }}
             />
-            <button
-              type="button"
-              onClick={() => {
-                setCount(count + 1);
-                dispatch(setNewCategorySelected({ bool: false }));
-              }}
-            >
+            <button type="button" onClick={() => {
+              setCount(count + 1)
+              dispatch(setNewCategorySelected({bool:false}))
+              }}>
               +
             </button>
           </div>
