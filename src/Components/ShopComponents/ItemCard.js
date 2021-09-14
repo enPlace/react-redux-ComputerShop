@@ -2,28 +2,27 @@ import React, { lazy, Suspense } from "react";
 import { useState } from "react";
 import shoppingCartIcon from "../../Assets/shopping-cart.svg";
 import { CircularProgress } from "@material-ui/core";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCategoryBool, setNewCategorySelected } from "../../reducers/slices/newCategorySelectedSlice";
 import { itemAdded } from "../../reducers/slices/cartSlice";
+
 
 const LoadPhoto = lazy(() => import("../LoadPhoto"));
 const loader = () => <CircularProgress></CircularProgress>;
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
+  const categoryBool = useSelector(selectCategoryBool)
   const [count, setCount] = useState(0);
-
+  if (categoryBool && count!==0 ){
+    setCount(0);
+  }
   return (
-    <div
-      className="item"
-      style={{
-
-
-      }}
-    >
+    <div className="item" style={{}}>
       <Suspense fallback={loader()}>
-        <LoadPhoto source={item.imgsrc} width = "150px" />
+        <LoadPhoto source={item.imgsrc} width="150px" />
       </Suspense>
-      <h4 className = "itemName">{item.name}</h4>
+      <h4 className="itemName">{item.name}</h4>
       <div
         className="itemInfo"
         style={{
@@ -31,10 +30,9 @@ const ItemCard = ({ item }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: "13px"
+          fontSize: "13px",
         }}
       >
-        
         <div>{item.size}</div>
         <div>{item.ram}</div>
         <div>{item.processor}</div>
@@ -67,12 +65,13 @@ const ItemCard = ({ item }) => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
-            dispatch(itemAdded({
+            dispatch(
+              itemAdded({
                 ...item,
-                count
-            }))
-            setCount(0)
-            
+                count,
+              })
+            );
+            setCount(0);
           }}
         >
           {" "}
@@ -94,7 +93,10 @@ const ItemCard = ({ item }) => {
                 setCount(e.target.value);
               }}
             />
-            <button type="button" onClick={() => setCount(count + 1)}>
+            <button type="button" onClick={() => {
+              setCount(count + 1)
+              dispatch(setNewCategorySelected({bool:false}))
+              }}>
               +
             </button>
           </div>
@@ -108,8 +110,13 @@ const ItemCard = ({ item }) => {
               backgroundColor: "white",
             }}
           >
-            <img src={shoppingCartIcon} id = "itemIcon" alt="" style={{ width: "20px" }} /> Add
-            to cart{" "}
+            <img
+              src={shoppingCartIcon}
+              id="itemIcon"
+              alt=""
+              style={{ width: "20px" }}
+            />{" "}
+            Add to cart{" "}
           </button>
         </form>
       </div>

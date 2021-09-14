@@ -1,11 +1,12 @@
-import speaker from "../../Assets/pexels-steve-johnson-1044989.jpg";
+import Background from "../../Assets/pexels-steve-johnson-1044989.jpg";
+
 import icon from "../../Assets/newegg.png";
 import LinksCarousel from "./LinksCarousel";
 import "./Home.css";
 const Home = () => {
   return (
     <div
-      className = "Home"
+      className="Home"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -14,11 +15,16 @@ const Home = () => {
         width: "100vw",
         height: "100vh",
         overflowx: "none",
+/*         backgroundImage: `url(${Background})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         
+        backgroundPosition: "center", */
       }}
     >
-      <img
-        src={speaker}
+
+            <img
+        src={Background}
         alt=""
         style={{
           position: "fixed",
@@ -28,50 +34,19 @@ const Home = () => {
           backgroundColor: "black",
         }}
       />
-      <div  style ={{
-        marginTop: "65px",
-        backgroundColor: "rgba(0, 0, 0, 0.481) ",
-        width: "100vw",
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center"
-        
-      }}>
-      <LinksCarousel></LinksCarousel>
-      </div>
-      {/*       <video
+      <div
         style={{
-          objectFit: "cover",
+          marginTop: "65px",
+
           width: "100vw",
-          height: "100vh",
-          position: "fixed",
-          top: "0",
-          left: "0",
-          zIndex: "-1",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-        playsInline
-        autoPlay
-        muted
-        loop
-        id="bgvid"
       >
-        <source src={video} type="video/mp4"></source>
-      </video> */}
-      {/* <Link to="/shop/laptops" style={{ position: "fixed", bottom: "270px" }}>
-        <button
-          style={{
-            width: "300px",
-            height: "50px",
-            border: "none",
-            backgroundColor: "rgba(255, 166, 0, 0.94)",
-            fontSize: "25px",
-            color: "white",
-            fontWeight: "bolder",
-          }}
-        >
-          Start shopping
-        </button>
-      </Link> */}
+        <LinksCarousel></LinksCarousel>
+      </div>
+
       <div className="Title">
         <img src={icon} alt="" style={{}} />
         <h1>nuevohuevo!</h1>
