@@ -7,7 +7,7 @@ import "./Cart.css"
 const Cart = () => {
     const cart = useSelector(selectCart)
   return (
-    <div className="Cart" style={{ display: "flex", boxSizing: "border-box" }}>
+    <div className="Cart" style={{ display: "flex", boxSizing: "border-box", minHeight:"100vh",  }}>
         <CartDetail cart = {cart}></CartDetail>
         <CartSummary cart = {cart}></CartSummary>
     </div>

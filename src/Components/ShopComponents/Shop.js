@@ -1,9 +1,8 @@
 import "./Shop.css";
 import ShopNav from "./ShopNav";
 import { Route, Switch, useRouteMatch } from "react-router";
-
-
 import DisplayItems from "./DisplayItems";
+
 const Shop = () => {
   let match = useRouteMatch();
 

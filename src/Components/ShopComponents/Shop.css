@@ -9,6 +9,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
+  z-index: -1;
 }
 .item {
   display: flex;
@@ -21,6 +22,8 @@
   margin: 10px;
   padding: 20px;
   padding-bottom: 0;
+  z-index: -2;
+  
 }
 .itemName {
   margin: 0px;

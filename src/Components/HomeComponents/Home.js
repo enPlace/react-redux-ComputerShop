@@ -12,7 +12,7 @@ const Home = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         overflowx: "none",
 /*         backgroundImage: `url(${Background})`,
@@ -38,7 +38,7 @@ const Home = () => {
         style={{
           marginTop: "65px",
 
-          width: "100vw",
+          width: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

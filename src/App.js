@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/HomeComponents/Home";
 import Shop from "./Components/ShopComponents/Shop";
 import Cart from "./Components/CartComponents/Cart";
+import Footer from "./Components/Footer";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
   );

@@ -40,7 +40,7 @@ const ItemCard = ({ item }) => {
         <div>{item.processor}</div>
         <div>{item.storage}</div>
         <div>{item.os}</div>
-        <div style={{ marginTottom: "auto" }}>
+        <div style={{ marginTop: "10px", fontWeight:"bolder" }}>
           $
           {parseFloat(item.price).toLocaleString("en-US", {
             minimumFractionDigits: 2,
