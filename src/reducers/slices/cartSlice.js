@@ -19,19 +19,17 @@ const cartSlice = createSlice({
       }
     },
     itemDeleted: (state, action) => {
-      const newIds = state.allIds.filter(id => id !== action.payload.id)
-      const newState = {...state}
-      delete newState[action.payload.id]; 
-      newState.allIds = newIds
-      return newState
-
-      
+      const newIds = state.allIds.filter((id) => id !== action.payload.id);
+      const newState = { ...state };
+      delete newState[action.payload.id];
+      newState.allIds = newIds;
+      return newState;
     },
     itemIncremented: (state, action) => {
       state[action.payload.id].count++;
     },
     itemDecremented: (state, action) => {
-      if(state[action.payload.id].count>0)state[action.payload.id].count--;
+      if (state[action.payload.id].count > 0) state[action.payload.id].count--;
     },
     countChanged: (state, action) => {
       state[action.payload.id].count = action.payload.count;
@@ -47,7 +45,6 @@ export const selectAllCartIds = (state) => {
 };
 export const selectcountById = (id) => (state) => {
   return state.cart[id].count;
-
 };
 export const selectItemById = (id) => (state) => {
   return state.cart[id];
@@ -66,13 +63,22 @@ export const selectTotalPrice = (state) => {
     itemPrice *= state.cart[id].count;
     price += itemPrice;
   });
-  return Math.round(price*100)/100
+  const num = Math.round(price * 100) / 100;
+  return num.toLocaleString("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 };
-export const selectItemPriceById =(id)=>(state) =>{
-  return Math.round(state.cart[id].count * (parseFloat(state.cart[id].price) * 100)) / 100
-}
-
-
+export const selectItemPriceById = (id) => (state) => {
+  const num =
+    Math.round(
+      state.cart[id].count * (parseFloat(state.cart[id].price) * 100)
+    ) / 100;
+  return num.toLocaleString("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+};
 
 export const {
   itemAdded,
