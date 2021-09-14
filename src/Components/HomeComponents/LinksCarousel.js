@@ -23,7 +23,7 @@ export default function LinksCarousel() {
         stopOnHover={false}
         showStatus={false}
         centerMode={true}
-        centerSlidePercentage={62}
+        centerSlidePercentage={20}
       >
         <div
           style={{
@@ -39,7 +39,7 @@ export default function LinksCarousel() {
             </Suspense>
             <h1
               style={{
-                marginBottom: "20px",
+                marginBottom: "30px",
               }}
             >
               Laptops
@@ -59,7 +59,7 @@ export default function LinksCarousel() {
             <Suspense fallback={loader()}>
               <LoadPhoto source={tablet} width="300px" />
             </Suspense>
-            <h1 style={{ marginBottom: "20px" }}>Tablets</h1>
+            <h1 style={{ marginBottom: "30px" }}>Tablets</h1>
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ export default function LinksCarousel() {
             <Suspense fallback={loader()}>
               <LoadPhoto source={keyboard} width="300px" />
             </Suspense>
-            <h1 style={{ marginBottom: "20px" }}>Keyboards</h1>
+            <h1 style={{ marginBottom: "30px" }}>Keyboards</h1>
           </Link>
         </div>
         <div
@@ -90,7 +90,7 @@ export default function LinksCarousel() {
             <Suspense fallback={loader()}>
               <LoadPhoto source={mouse} width="300px" />
             </Suspense>
-            <h1 style={{ marginBottom: "20px" }}>Mice</h1>
+            <h1 style={{ marginBottom: "30px" }}>Mice</h1>
           </Link>
         </div>
         <div
@@ -105,7 +105,7 @@ export default function LinksCarousel() {
           <Suspense fallback={loader()}>
             <LoadPhoto source={headset} width="300px" />
           </Suspense>
-          <h1 style={{ marginBottom: "20px" }}>Headsets</h1>
+          <h1 style={{ marginBottom: "30px" }}>Headsets</h1>
           </Link>
         </div>
       </Carousel>

@@ -1,4 +1,4 @@
-import Background from "../../Assets/pexels-steve-johnson-1044989.jpg";
+import Background from "../../Assets/background3.jpeg";
 
 import icon from "../../Assets/newegg.png";
 import LinksCarousel from "./LinksCarousel";
@@ -15,14 +15,15 @@ const Home = () => {
         width: "100%",
         height: "100vh",
         overflowx: "none",
-/*         backgroundImage: `url(${Background})`,
+        backgroundColor: "orange",
+        backgroundImage: `url(${Background})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        
-        backgroundPosition: "center", */
+
+        backgroundPosition: "center",
       }}
     >
-
+      {/* 
             <img
         src={Background}
         alt=""
@@ -33,11 +34,12 @@ const Home = () => {
           zIndex: "-10",
           backgroundColor: "black",
         }}
-      />
+      /> */}
       <div
+        className="linksCaroselContainer"
         style={{
-          marginTop: "65px",
-
+          marginTop: "75px",
+          height: "100%",
           width: "100%",
           display: "flex",
           alignItems: "center",

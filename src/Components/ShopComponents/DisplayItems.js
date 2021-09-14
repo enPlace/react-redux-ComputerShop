@@ -13,6 +13,7 @@ const DisplayItems = ({ inventoryType }) => {
       style={{
         marginLeft: "300px",
         marginBottom: "80px",
+       
       
       }}
     >

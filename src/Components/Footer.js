@@ -13,6 +13,7 @@ const Footer = () => {
         alignItems: "center",
         justifyContent: "center",
         color: "white",
+        position: "relative",
       }}
     >
       <a

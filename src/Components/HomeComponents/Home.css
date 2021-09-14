@@ -2,12 +2,17 @@
     background-image: url("Assets/img/pexels-steve-johnson-1044989.jpg");
 }  */
 .carousel-wrapper {
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   padding-top: 20px;
-  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   max-width: 800px;
   color: white;
+  overflow: hidden;
 }
 .carousel-wrapper img {
   border-radius: 20px !important;
@@ -23,10 +28,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 40px;
   font-style: italic;
   width: 100%;
-  background-color: rgba(3, 1, 54, 0.945);
+  /* background-color: rgb(1, 0, 37); */
+  /* background-color: rgb(3, 1, 54); */
+/*  background-color: rgb(0, 0, 17); */
+background-color: rgb(2, 0, 65);
+
 }
 .Title img {
   border-radius: 50%;
@@ -37,8 +46,14 @@
 }
 
 @media only screen and (max-width: 770px) {
+  .carousel-wrapper{
+    /* background-color: rgba(0, 0, 0, 0.336); */
+    background-color: transparent;
+  }
   .carousel-wrapper img {
     width: 175px !important;
+   
+
   }
   .Title {
     font-size: 35px;
@@ -49,13 +64,17 @@
   }
 }
 
-@media only screen and (max-width: 533px) {
+@media only screen and (max-width: 550px) {
   .Title {
     font-size: 25px;
   }
   .Title img {
     width: 75px;
     height: 75px;
+  }
+  .linksCaroselContainer
+  {
+    margin-top: 67px !important;
   }
 }
 @media only screen and (max-width: 433px) {
@@ -67,3 +86,4 @@
     height: 50px;
   }
 }
+
