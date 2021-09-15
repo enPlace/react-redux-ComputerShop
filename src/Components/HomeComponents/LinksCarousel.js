@@ -35,7 +35,7 @@ export default function LinksCarousel() {
         >
           <Link to="/shop/laptops">
             <Suspense fallback={loader()}>
-              <LoadPhoto source={laptop} width="300px" />
+              <LoadPhoto source={laptop} width="350px" />
             </Suspense>
             <h1
               style={{
@@ -57,7 +57,7 @@ export default function LinksCarousel() {
         >
           <Link to="/shop/tablets">
             <Suspense fallback={loader()}>
-              <LoadPhoto source={tablet} width="300px" />
+              <LoadPhoto source={tablet} width="350px" />
             </Suspense>
             <h1 style={{ marginBottom: "30px" }}>Tablets</h1>
           </Link>
@@ -73,7 +73,7 @@ export default function LinksCarousel() {
         >
           <Link to="/shop/keyboards">
             <Suspense fallback={loader()}>
-              <LoadPhoto source={keyboard} width="300px" />
+              <LoadPhoto source={keyboard} width="350px" />
             </Suspense>
             <h1 style={{ marginBottom: "30px" }}>Keyboards</h1>
           </Link>
@@ -88,7 +88,7 @@ export default function LinksCarousel() {
         >
           <Link to="/shop/mice">
             <Suspense fallback={loader()}>
-              <LoadPhoto source={mouse} width="300px" />
+              <LoadPhoto source={mouse} width="350px" />
             </Suspense>
             <h1 style={{ marginBottom: "30px" }}>Mice</h1>
           </Link>
@@ -103,7 +103,7 @@ export default function LinksCarousel() {
         >
           <Link to="/shop/headphones">
           <Suspense fallback={loader()}>
-            <LoadPhoto source={headset} width="300px" />
+            <LoadPhoto source={headset} width="350px" />
           </Suspense>
           <h1 style={{ marginBottom: "30px" }}>Headsets</h1>
           </Link>

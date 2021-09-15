@@ -21,6 +21,9 @@
   text-decoration: none;
   color: white;
 }
+.carousel-wrapper h1 {
+  font-size: 50px;
+}
 .Title {
   min-height: 100px;
   color: white;
@@ -48,13 +51,15 @@
 
 @media only screen and (max-width: 770px) {
   .carousel-wrapper{
-    /* background-color: rgba(0, 0, 0, 0.336); */
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.521);
+    /* background-color: transparent; */
   }
   .carousel-wrapper img {
-    width: 175px !important;
-   
+    width: 255px !important;
 
+  }
+  .carousel-wrapper h1{
+    font-size: 30px;
   }
   .Title {
     font-size: 35px;

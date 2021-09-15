@@ -51,7 +51,7 @@ const Home = () => {
 
       <div className="Title">
         <img src={icon} alt="" style={{}} />
-        <h1 style = {{marginLeft: "-30px"}}>nuevohuevo!</h1>
+        <h1 style = {{}}>nuevohuevo!</h1>
       </div>
     </div>
   );
