@@ -20,7 +20,7 @@ const ItemCard = ({ item }) => {
     setCount(0);
   }
   return (
-    <div className="item" style={{}}>
+    <div className="item" >
       <Suspense fallback={loader()}>
         <LoadPhoto source={item.imgsrc} width="150px" />
       </Suspense>

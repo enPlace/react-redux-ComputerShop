@@ -23,18 +23,6 @@ const Home = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* 
-            <img
-        src={Background}
-        alt=""
-        style={{
-          position: "fixed",
-          width: "150vw",
-          height: "150vh",
-          zIndex: "-10",
-          backgroundColor: "black",
-        }}
-      /> */}
       <div
         className="linksCaroselContainer"
         style={{

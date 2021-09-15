@@ -1,7 +1,5 @@
 const LoadPhoto = ({ source, width }) => {
-  console.log(width)
-  return width !==undefined ? (
-  
+  return width !== undefined ? (
     <img
       style={{
         width: width,

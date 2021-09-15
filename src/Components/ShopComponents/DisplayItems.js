@@ -6,7 +6,6 @@ import ItemCard from "./ItemCard";
 
 const DisplayItems = ({ inventoryType }) => {
   const inventory = useSelector(selectInventoryByType(inventoryType));
-  console.log(inventory);
   return (
     <div
       className="DisplayItems"
@@ -22,7 +21,7 @@ const DisplayItems = ({ inventoryType }) => {
         style={{ display: "flex", flexWrap: "wrap", marginTop: "100px" }}
       >
         {inventory.allIds.map((key) => {
-          return <ItemCard item={inventory[key]}></ItemCard>;
+          return <ItemCard item={inventory[key]} key = {key}></ItemCard>;
         })}
       </div>
     </div>

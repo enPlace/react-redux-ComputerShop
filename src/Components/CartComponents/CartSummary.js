@@ -30,7 +30,7 @@ const CartSummary = ({ cart }) => {
             Your cart is empty
           </h3>
         ) : (
-          cartIds.map((id) => <CartSummaryItem id={id} />)
+          cartIds.map((id) => <CartSummaryItem id={id} key = {id} />)
         )}
       </div>
 

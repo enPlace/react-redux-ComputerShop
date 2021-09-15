@@ -7,7 +7,7 @@ import { selectTotalCount } from "../reducers/slices/cartSlice";
 const Navbar = () => {
   const count = useSelector(selectTotalCount)
   return (
-    <nav class = "mainNav"
+    <nav className = "mainNav"
       style={{
         display: "flex",
         top: "0",
@@ -47,7 +47,7 @@ const Navbar = () => {
         <li>
           <NavLink to="/shop/laptops">Shop</NavLink>
         </li>
-        <li class = "navIcon" style={{ marginRight: "20px" }}>
+        <li className = "navIcon" style={{ marginRight: "20px" }}>
           <NavLink to="/cart" style = {{color:"orange"}}>
             <img
               src={cartIcon}

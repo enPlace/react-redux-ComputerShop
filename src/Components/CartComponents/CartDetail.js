@@ -23,7 +23,7 @@ const CartDetail = ({ cart }) => {
       ) : (
         <div className="yourCart">
           <h1 style={{ borderBottom: "5px solid gray" }}>Your cart</h1>
-          {cartIds.map((id) => <CartDetailItem id={id} />)}
+          {cartIds.map((id) => <CartDetailItem id={id} key = {id} />)}
         </div>
         
       )}
