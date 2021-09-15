@@ -67,7 +67,7 @@ const CartDetailItem = ({ id }) => {
             +
           </button>{" "}
         </div>
-        <div>Price x 1 ={item.price}</div>
+        <div>Price x 1 = $ {itemPrice}</div>
       </div>
       <div
         className="col3"
