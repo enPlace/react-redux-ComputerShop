@@ -10,6 +10,7 @@ const Navbar = () => {
     <nav class = "mainNav"
       style={{
         display: "flex",
+        top: "0",
         width: "100vw",
         position:"fixed",
         alignItems: "center",
